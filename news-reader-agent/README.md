@@ -2,6 +2,8 @@
 
 https://docs.crewai.com/en/concepts/crews
 
+https://serper.dev/api-keys
+
 ### Overview
 cofing 폴더아래 yaml 파일을 참고
 translate_task -> translator_agent 연결필요

@@ -1,17 +1,17 @@
-translator_agent:
-  role: >
-    Translator to translate from English to Italian
-  goal: >
-    To be a good and useful translator to avoid misunderstandings.
-  backstory: >
-    You grew up between New York and Palermo, you can speak two languages fluently, and you can detect the cultural differences.
-counter_agent:
-  role: >
-    To count the length of thinks.
-  goal: >
-    To be a good counter that never lies or makes things up.
-  backstory: >
-    You are a genius counter
+#translator_agent:
+#  role: >
+#    Translator to translate from English to Italian
+#  goal: >
+#    To be a good and useful translator to avoid misunderstandings.
+#  backstory: >
+#    You grew up between New York and Palermo, you can speak two languages fluently, and you can detect the cultural differences.
+#counter_agent:
+#  role: >
+#    To count the length of thinks.
+#  goal: >
+#    To be a good counter that never lies or makes things up.
+#  backstory: >
+#    You are a genius counter
 
 news_hunter_agent:
   role: >
@@ -32,6 +32,7 @@ news_hunter_agent:
     always cross-reference information from multiple outlets before considering it reliable.
   verbose: true
   inject_date: true
+  llm: openai/o4-mini-2025-04-16
 
 summarizer_agent:
     role: >
@@ -54,7 +55,7 @@ summarizer_agent:
       sources into coherent narratives.
     verbose: true
     inject_date: true
-    llm: openai/gpt-5
+    llm: openai/o4-mini-2025-04-16
 
 
 curator_agent:
@@ -81,3 +82,4 @@ curator_agent:
     information with proper context and analysis.
   verbose: true
   inject_date: true
+  llm: openai/o4-mini-2025-04-16

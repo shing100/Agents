@@ -8,6 +8,8 @@ dependencies = [
     "firecrawl-py>=4.3.6",
     "notebook>=7.4.6",
     "openai>=1.109.1",
+    "python-dotenv>=1.1.1",
+    "crewai[tools]>=0.152.0",
 ]
 
 [dependency-groups]

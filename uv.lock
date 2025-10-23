@@ -12,6 +12,8 @@ name = "agents"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "autogen-agentchat" },
+    { name = "autogen-ext" },
     { name = "crewai", extra = ["tools"] },
     { name = "notebook" },
     { name = "openai" },
@@ -25,6 +27,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "autogen-agentchat", specifier = ">=0.7.5" },
+    { name = "autogen-ext", specifier = ">=0.7.5" },
     { name = "crewai", extras = ["tools"], specifier = ">=0.152.0" },
     { name = "notebook", specifier = ">=7.4.6" },
     { name = "openai", specifier = ">=1.109.1" },
@@ -248,6 +252,47 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/5a/b0/1367933a8532ee6ff8d63537de4f1177af4bff9f3e829baf7331f595bb24/attrs-25.3.0.tar.gz", hash = "sha256:75d7cefc7fb576747b2c81b4442d4d4a1ce0900973527c011d1030fd3bf4af1b", size = 812032 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl", hash = "sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3", size = 63815 },
+]
+
+[[package]]
+name = "autogen-agentchat"
+version = "0.7.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "autogen-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e5/b6/df2f835ce3aaaa2716a3dfbbd4ab8855839184f08b35ce0baa23b26a1885/autogen_agentchat-0.7.5.tar.gz", hash = "sha256:8d9c718db52ef24a518806b3a0ef848f0e4c1902877675dc0abed73a8e6e7755", size = 147716 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9e/82/23490a70837d77d691948863d393cef71a06d36903249f635b28f579292b/autogen_agentchat-0.7.5-py3-none-any.whl", hash = "sha256:d19ca8ec26cb15e071a56c4269140aea2bf3c718bdc7e06f6677af9a905815ba", size = 119302 },
+]
+
+[[package]]
+name = "autogen-core"
+version = "0.7.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jsonref" },
+    { name = "opentelemetry-api" },
+    { name = "pillow" },
+    { name = "protobuf" },
+    { name = "pydantic" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/11/fea52bf3541c5308bed1ee9b9b3596fa510b2c5db893d32b649d22f02b87/autogen_core-0.7.5.tar.gz", hash = "sha256:70c2871389f1d0a7f6db8ef78717a51b7ce877ff4a08a836b7758d604dece203", size = 101980 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/33/83/8ad899fca9dd2d2b3e5e37be13dd9e6aee3e53a621041b0624d74b07e1ee/autogen_core-0.7.5-py3-none-any.whl", hash = "sha256:4f4a0d3b88a36da75b2ef0d40be2d5e3a207cae7f7d951511e498ad1d68f8ef4", size = 101874 },
+]
+
+[[package]]
+name = "autogen-ext"
+version = "0.7.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "autogen-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e5/c8/f0651372f814c48eb64ffe921166995b7734bec0df7f0ba663383e831f58/autogen_ext-0.7.5.tar.gz", hash = "sha256:711ab9238ea66ff2abef163c331e538092bdea661620727a4a9b2ebce1c22df9", size = 417568 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5c/10/9333ba6c532086cce7ec7fb39e36b9a08afdbc39e2d3519f00af712e403a/autogen_ext-0.7.5-py3-none-any.whl", hash = "sha256:18cecc8aab37c7c4861fbad038a1017f0ef25e35e273aa158066ccf9d93fea4f", size = 331380 },
 ]
 
 [[package]]
@@ -2663,16 +2708,16 @@ wheels = [
 
 [[package]]
 name = "protobuf"
-version = "6.32.1"
+version = "5.29.5"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/fa/a4/cc17347aa2897568beece2e674674359f911d6fe21b0b8d6268cd42727ac/protobuf-6.32.1.tar.gz", hash = "sha256:ee2469e4a021474ab9baafea6cd070e5bf27c7d29433504ddea1a4ee5850f68d", size = 440635 }
+sdist = { url = "https://files.pythonhosted.org/packages/43/29/d09e70352e4e88c9c7a198d5645d7277811448d76c23b00345670f7c8a38/protobuf-5.29.5.tar.gz", hash = "sha256:bc1463bafd4b0929216c35f437a8e28731a2b7fe3d98bb77a600efced5a15c84", size = 425226 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c0/98/645183ea03ab3995d29086b8bf4f7562ebd3d10c9a4b14ee3f20d47cfe50/protobuf-6.32.1-cp310-abi3-win32.whl", hash = "sha256:a8a32a84bc9f2aad712041b8b366190f71dde248926da517bde9e832e4412085", size = 424411 },
-    { url = "https://files.pythonhosted.org/packages/8c/f3/6f58f841f6ebafe076cebeae33fc336e900619d34b1c93e4b5c97a81fdfa/protobuf-6.32.1-cp310-abi3-win_amd64.whl", hash = "sha256:b00a7d8c25fa471f16bc8153d0e53d6c9e827f0953f3c09aaa4331c718cae5e1", size = 435738 },
-    { url = "https://files.pythonhosted.org/packages/10/56/a8a3f4e7190837139e68c7002ec749190a163af3e330f65d90309145a210/protobuf-6.32.1-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:d8c7e6eb619ffdf105ee4ab76af5a68b60a9d0f66da3ea12d1640e6d8dab7281", size = 426454 },
-    { url = "https://files.pythonhosted.org/packages/3f/be/8dd0a927c559b37d7a6c8ab79034fd167dcc1f851595f2e641ad62be8643/protobuf-6.32.1-cp39-abi3-manylinux2014_aarch64.whl", hash = "sha256:2f5b80a49e1eb7b86d85fcd23fe92df154b9730a725c3b38c4e43b9d77018bf4", size = 322874 },
-    { url = "https://files.pythonhosted.org/packages/5c/f6/88d77011b605ef979aace37b7703e4eefad066f7e84d935e5a696515c2dd/protobuf-6.32.1-cp39-abi3-manylinux2014_x86_64.whl", hash = "sha256:b1864818300c297265c83a4982fd3169f97122c299f56a56e2445c3698d34710", size = 322013 },
-    { url = "https://files.pythonhosted.org/packages/97/b7/15cc7d93443d6c6a84626ae3258a91f4c6ac8c0edd5df35ea7658f71b79c/protobuf-6.32.1-py3-none-any.whl", hash = "sha256:2601b779fc7d32a866c6b4404f9d42a3f67c5b9f3f15b4db3cccabe06b95c346", size = 169289 },
+    { url = "https://files.pythonhosted.org/packages/5f/11/6e40e9fc5bba02988a214c07cf324595789ca7820160bfd1f8be96e48539/protobuf-5.29.5-cp310-abi3-win32.whl", hash = "sha256:3f1c6468a2cfd102ff4703976138844f78ebd1fb45f49011afc5139e9e283079", size = 422963 },
+    { url = "https://files.pythonhosted.org/packages/81/7f/73cefb093e1a2a7c3ffd839e6f9fcafb7a427d300c7f8aef9c64405d8ac6/protobuf-5.29.5-cp310-abi3-win_amd64.whl", hash = "sha256:3f76e3a3675b4a4d867b52e4a5f5b78a2ef9565549d4037e06cf7b0942b1d3fc", size = 434818 },
+    { url = "https://files.pythonhosted.org/packages/dd/73/10e1661c21f139f2c6ad9b23040ff36fee624310dc28fba20d33fdae124c/protobuf-5.29.5-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:e38c5add5a311f2a6eb0340716ef9b039c1dfa428b28f25a7838ac329204a671", size = 418091 },
+    { url = "https://files.pythonhosted.org/packages/6c/04/98f6f8cf5b07ab1294c13f34b4e69b3722bb609c5b701d6c169828f9f8aa/protobuf-5.29.5-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:fa18533a299d7ab6c55a238bf8629311439995f2e7eca5caaff08663606e9015", size = 319824 },
+    { url = "https://files.pythonhosted.org/packages/85/e4/07c80521879c2d15f321465ac24c70efe2381378c00bf5e56a0f4fbac8cd/protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:63848923da3325e1bf7e9003d680ce6e14b07e55d0473253a690c3a8b8fd6e61", size = 319942 },
+    { url = "https://files.pythonhosted.org/packages/7e/cc/7e77861000a0691aeea8f4566e5d3aa716f2b1dece4a24439437e41d3d25/protobuf-5.29.5-py3-none-any.whl", hash = "sha256:6cf42630262c59b2d8de33954443d94b746c952b01434fc58a417fdbd2e84bd5", size = 172823 },
 ]
 
 [[package]]

@@ -8,6 +8,8 @@ dependencies = [
     "openai>=1.109.1",
     "python-dotenv>=1.1.1",
     "crewai[tools]>=0.152.0",
+    "autogen-agentchat>=0.7.5",
+    "autogen-ext>=0.7.5",
 ]
 
 [dependency-groups]
